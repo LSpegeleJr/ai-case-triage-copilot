@@ -24,7 +24,7 @@ Run with: streamlit run agents/dashboard.py
 
 import os
 import sys
-from datetime import datetime, time
+from datetime import datetime, time, timedelta
 from pathlib import Path
 import pandas as pd
 import streamlit as st
@@ -140,11 +140,6 @@ def parse_created_date(case: dict) -> datetime | None:
     # "2026-09-05T20:05:00.000+0000" — turns it into a real Python
     # datetime object that can actually be compared and formatted, rather
     # than compared as plain text
-    # date_parser.parse(...)
-        # from python-dateutil — reliably handles Salesforce's exact
-        # timestamp format (including the +0000 offset) across Python
-        # versions, unlike the standard library's datetime.fromisoformat(),
-        # which is pickier about the exact format in older Python versions
     # case.get("CreatedDate")
         # could be None if this Case somehow has no CreatedDate at all —
         # date_parser.parse(None) would raise, so this is checked first
@@ -152,7 +147,25 @@ def parse_created_date(case: dict) -> datetime | None:
     if not raw:
         return None
 
-    parsed = date_parser.parse(raw)
+    # date_parser.parse(raw, default=datetime(1900, 1, 1))
+        # from python-dateutil — reliably handles Salesforce's exact
+        # timestamp format (including the +0000 offset) across Python
+        # versions, unlike the standard library's datetime.fromisoformat(),
+        # which is pickier about the exact format in older Python versions
+        # default=datetime(1900, 1, 1)
+            # A REAL, sharp-edged gotcha this guards against: if
+            # date_parser.parse() can't determine some piece of the date
+            # from the input string, it doesn't raise an error — it
+            # silently FILLS IN the missing piece using this "default"
+            # value. If you never pass one, dateutil's own built-in
+            # default is the CURRENT moment — meaning a partially-broken
+            # or unexpectedly-shaped input string would silently become
+            # "today," with no error or warning anywhere, for every
+            # single Case at once. An obviously-wrong sentinel date
+            # (1900) instead makes that failure mode immediately visible
+            # (Cases would show as from 1900, clearly wrong) rather than
+            # silently masquerading as legitimate, valid data
+    parsed = date_parser.parse(raw, default=datetime(1900, 1, 1))
 
     # .astimezone().replace(tzinfo=None)
         # Salesforce's timestamp comes back timezone-AWARE (it includes a
@@ -308,6 +321,18 @@ def main():
         # so this line can't crash trying to call min() on nothing
     earliest = min(all_dates).date() if all_dates else datetime.now().date()
     latest = max(all_dates).date() if all_dates else datetime.now().date()
+
+    # if earliest == latest: latest = earliest + timedelta(days=1)
+        # A SECOND, independent safety net — even if every Case genuinely
+        # were created on the exact same calendar day, min_value equal to
+        # max_value below would leave the widget with no valid range to
+        # actually pick within, which can make a date-range picker appear
+        # entirely locked/uninteractive rather than just narrow. Forcing
+        # at least a one-day spread guarantees the widget always stays
+        # genuinely usable, regardless of what the underlying data looks
+        # like or what caused it.
+    if earliest == latest:
+        latest = earliest + timedelta(days=1)
 
     # st.sidebar.date_input(..., value=(earliest, latest))
         # passing a TUPLE as the value makes this a single RANGE picker —
