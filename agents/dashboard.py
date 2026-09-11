@@ -22,7 +22,9 @@ around a running app.
 Run with: streamlit run agents/dashboard.py
 """
 
+import html
 import os
+import re
 import sys
 from datetime import datetime, time, timedelta
 from pathlib import Path
@@ -194,6 +196,84 @@ def filter_by_date_range(cases: list, start_dt: datetime, end_dt: datetime) -> l
         if created and start_dt <= created <= end_dt:
             filtered.append(c)
     return filtered
+
+
+
+
+# AGENT_COLORS
+    # Maps each agent's exact log tag to a specific, deliberately
+    # high-contrast hex color for that agent's name — chosen to read
+    # clearly against a plain white background, not Streamlit's built-in
+    # color names (which can render as lighter, less legible shades
+    # depending on theme)
+AGENT_COLORS = {
+    "[Root Cause Agent]": "#6A1B9A",  # dark purple
+    "[Safety Agent]": "#0F7B0F",       # dark green
+    "[Dispatch Agent]": "#1565C0",     # dark blue
+}
+# The rest of each entry's text — deliberately much darker than a
+# typical muted/disabled-widget grey, since the specific complaint was
+# that the reasoning trace was hard to read
+BODY_TEXT_COLOR = "#1A1A1A"
+
+
+def format_reasoning_log(log: str) -> str:
+    # Turns the combined AI_Reasoning_Log__c text into an HTML string —
+    # each agent's own tag bolded and colored per AGENT_COLORS, the rest
+    # of that entry's text in BODY_TEXT_COLOR — for rendering via
+    # st.markdown(unsafe_allow_html=True) instead of a plain, unstyled,
+    # unselectable text_area
+    if not log:
+        return "<i>(empty)</i>"
+
+    # re.split(r'(?=\[)', log)
+        # Splits the whole log into separate entries, each one starting
+        # at a "[" character — (?=\[) is a LOOKAHEAD, meaning "split right
+        # before a [", so the "[" itself stays attached to the entry that
+        # follows it, rather than being consumed by the split
+    entries = re.split(r'(?=\[)', log)
+
+    html_parts = []
+    for entry in entries:
+        entry = entry.strip()
+        # Skips any genuinely empty fragment the split can produce (e.g.
+        # leading whitespace before the very first "[")
+        if not entry:
+            continue
+
+        # matched_tag = next((tag for tag in AGENT_COLORS if entry.startswith(tag)), None)
+            # A generator expression scanning AGENT_COLORS' keys for the
+            # one this entry actually starts with; next(..., None) returns
+            # that match, or None if this entry doesn't start with any
+            # known agent tag at all (a safety net, not expected in
+            # normal use)
+        matched_tag = next((tag for tag in AGENT_COLORS if entry.startswith(tag)), None)
+
+        if matched_tag:
+            # rest = entry[len(matched_tag):]
+                # A SLICE — everything in this entry AFTER the tag itself,
+                # i.e. the actual reasoning text
+            rest = entry[len(matched_tag):]
+            color = AGENT_COLORS[matched_tag]
+            # html.escape(rest)
+                # Escapes any characters that would otherwise be
+                # interpreted as HTML markup (like a literal "<" or "&"
+                # the AI-generated text might happen to contain) — a
+                # safety measure since this whole block gets rendered as
+                # real HTML, not plain text
+            html_parts.append(
+                f'<p style="margin-bottom:0.75em; line-height:1.5;">'
+                f'<span style="color:{color}; font-weight:bold;">{matched_tag}</span>'
+                f'<span style="color:{BODY_TEXT_COLOR};">{html.escape(rest)}</span>'
+                f'</p>'
+            )
+        else:
+            # A fallback for any entry that somehow doesn't start with a
+            # known tag — still shown, in the same dark body color, just
+            # without a colored agent name to highlight
+            html_parts.append(f'<p style="color:{BODY_TEXT_COLOR}; margin-bottom:0.75em; line-height:1.5;">{html.escape(entry)}</p>')
+
+    return "".join(html_parts)
 
 
 def build_table_rows(cases: list) -> list:
@@ -414,12 +494,26 @@ def main():
         st.markdown(f"**Human Reviewed:** {selected_case.get('Human_Reviewed__c')}")
     with col2:
         st.markdown("**Full reasoning trace (all agents):**")
-        # Displays the full accumulated log as a large, read-only text box
-        # st.text_area(..., height=300, disabled=True)
-            # disabled=True prevents the dispatcher from accidentally
-            # editing it, since this is meant to display the log, not
-            # create a new editable copy of it
-        st.text_area("AI_Reasoning_Log__c", value=selected_case.get("AI_Reasoning_Log__c") or "(empty)", height=300, disabled=True, label_visibility="collapsed")
+        # Displays the full accumulated log with each agent's name bolded
+        # and colored distinctly, in a scrollable bordered box mimicking
+        # a text_area's look — but as actual rendered HTML, not a
+        # disabled widget, so the text is genuinely selectable and
+        # copyable, which disabled=True specifically prevented
+        # format_reasoning_log(...)
+            # builds the styled HTML string — see its own definition
+            # above for exactly how each agent gets its color
+        # unsafe_allow_html=True
+            # required for the inline color/bold styling to actually
+            # render as styling rather than showing as literal text;
+            # the reasoning text itself is escaped via html.escape()
+            # inside format_reasoning_log() before this ever runs, so
+            # this doesn't open up rendering arbitrary AI-generated HTML
+        reasoning_html = format_reasoning_log(selected_case.get("AI_Reasoning_Log__c"))
+        st.markdown(
+            f'<div style="max-height:300px; overflow-y:auto; border:1px solid #ccc; '
+            f'border-radius:6px; padding:12px; background-color:#fafafa;">{reasoning_html}</div>',
+            unsafe_allow_html=True,
+        )
 
     st.divider()
 
