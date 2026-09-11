@@ -1,0 +1,13 @@
+KA_Key__c,Title__c,Equipment_Type__c,Category__c,Body__c
+KB-0001,Diagnosing abnormal vibration on rotating equipment,Pump,Troubleshooting,"Check for cavitation, bearing wear, and misalignment before disassembly. Vibration above 7 mm/s RMS on a Safety-Critical asset should trigger immediate inspection."
+KB-0002,Responding to high differential pressure across scrubber media,Scrubber,Troubleshooting,Rising differential pressure usually indicates media fouling or plugging. Confirm inlet gas flow rate against design basis before recommending media replacement.
+KB-0003,Valve stem leak first response,Valve,Safety,Any reported leak on a valve handling regulated or hazardous media should be treated as a potential release event until confirmed otherwise. Escalate immediately.
+KB-0004,Heat exchanger fouling and efficiency loss,Heat Exchanger,Troubleshooting,A steady rise in outlet temperature differential over weeks points to fouling. A sudden shift in a single shift points to a tube leak instead.
+KB-0005,Reactor temperature excursion response,Reactor,Safety,Temperature excursions outside setpoint band require verifying whether the deviation is on .PV (actual process value) or .SP (setpoint) before dispatching a technician.
+KB-0006,Compressor surge troubleshooting,Compressor,Troubleshooting,Surge events are frequently caused by downstream valve position changes. Review recent control system logic changes before assuming a mechanical fault.
+KB-0007,Storage tank level sensor drift,Storage Tank,Troubleshooting,Level sensor drift is common after long maintenance intervals. Cross-check against a secondary level indication before dispatching.
+KB-0008,Transmitter calibration failure patterns,Sensor/Transmitter,Troubleshooting,Repeated calibration failures on the same transmitter model may indicate a batch defect rather than an installation issue.
+KB-0009,Chemical odor near process equipment protocol,Valve,Safety,"Any reported chemical odor, regardless of equipment type, is a Safety-Critical case by default and must page the on-call safety engineer, not the standard dispatch queue."
+KB-0010,Pump seal failure early indicators,Pump,Troubleshooting,Minor seal weeping is a precursor to failure. Recommend scheduled seal replacement rather than emergency dispatch if flow rate is stable.
+KB-0011,Scrubber caustic feed interruption,Scrubber,Safety,Loss of caustic feed to a scrubber treating acid gas is a Safety-Critical condition and should escalate regardless of reported severity language.
+KB-0012,Reactor pressure relief valve chatter,Reactor,Safety,Audible chatter on a pressure relief valve indicates the valve is near its set pressure and should never be deferred to routine maintenance.

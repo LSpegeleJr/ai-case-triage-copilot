@@ -1,0 +1,7 @@
+anthropic
+python-dotenv
+simple-salesforce
+requests
+streamlit
+pandas
+python-dateutil

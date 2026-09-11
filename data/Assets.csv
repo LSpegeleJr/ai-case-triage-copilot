@@ -1,0 +1,26 @@
+Asset_Key__c,Name,AccountId,Equipment_Type__c,Criticality__c,InstallDate,Last_Maintenance_Date__c,SerialNumber
+AST-0001,Valve 001,001g800000kVtowAAC,Valve,Safety-Critical,2023-01-19,2026-04-29,SN-334053
+AST-0002,Reactor 002,001g800000kVtowAAC,Reactor,Standard,2018-07-19,2025-08-18,SN-671858
+AST-0003,Valve 003,001g800000kVtowAAC,Valve,Production-Critical,2025-10-11,2026-08-17,SN-198246
+AST-0004,Heat Exchanger 004,001g800000kVtowAAC,Heat Exchanger,Safety-Critical,2019-05-21,2026-08-19,SN-688508
+AST-0005,Heat Exchanger 005,001g800000kVtowAAC,Heat Exchanger,Standard,2020-01-09,2026-01-30,SN-331148
+AST-0006,Sensor/Transmitter 006,001g800000kVtowAAC,Sensor/Transmitter,Production-Critical,2026-01-23,2025-08-09,SN-944962
+AST-0007,Reactor 007,001g800000kVtowAAC,Reactor,Production-Critical,2022-04-27,2026-04-12,SN-263032
+AST-0008,Heat Exchanger 008,001g800000kVtowAAC,Heat Exchanger,Standard,2022-05-12,2026-07-11,SN-197251
+AST-0009,Storage Tank 009,001g800000kVtowAAC,Storage Tank,Safety-Critical,2022-04-12,2025-10-27,SN-377370
+AST-0010,Pump 010,001g800000kVtowAAC,Pump,Standard,2020-02-14,2026-06-30,SN-496922
+AST-0011,Valve 011,001g800000kVtowAAC,Valve,Production-Critical,2019-02-01,2025-10-20,SN-479201
+AST-0012,Heat Exchanger 012,001g800000kVtowAAC,Heat Exchanger,Standard,2025-08-15,2025-09-28,SN-338968
+AST-0013,Scrubber 013,001g800000kVtowAAC,Scrubber,Standard,2023-07-11,2026-07-12,SN-498591
+AST-0014,Scrubber 014,001g800000kVtowAAC,Scrubber,Production-Critical,2022-01-16,2026-06-10,SN-488162
+AST-0015,Compressor 015,001g800000kVtowAAC,Compressor,Safety-Critical,2023-02-21,2025-09-07,SN-816751
+AST-0016,Valve 016,001g800000kVtowAAC,Valve,Production-Critical,2024-03-20,2025-12-02,SN-864544
+AST-0017,Heat Exchanger 017,001g800000kVtowAAC,Heat Exchanger,Safety-Critical,2021-11-17,2026-04-16,SN-771088
+AST-0018,Heat Exchanger 018,001g800000kVtowAAC,Heat Exchanger,Production-Critical,2025-07-04,2026-05-07,SN-961722
+AST-0019,Pump 019,001g800000kVtowAAC,Pump,Standard,2021-08-20,2026-04-17,SN-169403
+AST-0020,Heat Exchanger 020,001g800000kVtowAAC,Heat Exchanger,Standard,2019-10-10,2025-08-30,SN-429963
+AST-0021,Heat Exchanger 021,001g800000kVtowAAC,Heat Exchanger,Production-Critical,2021-09-12,2025-10-07,SN-581141
+AST-0022,Reactor 022,001g800000kVtowAAC,Reactor,Production-Critical,2023-05-15,2025-08-16,SN-688637
+AST-0023,Scrubber 023,001g800000kVtowAAC,Scrubber,Standard,2021-05-01,2025-11-07,SN-518801
+AST-0024,Compressor 024,001g800000kVtowAAC,Compressor,Safety-Critical,2024-08-01,2025-12-15,SN-617488
+AST-0025,Valve 025,001g800000kVtowAAC,Valve,Standard,2024-11-26,2026-06-15,SN-757924

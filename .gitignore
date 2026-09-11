@@ -1,0 +1,14 @@
+venv/
+__pycache__/
+*.pyc
+.env
+.env.staging
+output/*.csv
+!output/.gitkeep
+
+# Sprint 1 planning/reference artifacts — not read by any running code,
+# excluded to keep the public repo focused on the actual system
+product_backlog.csv
+milestone1_sprint_plan.md
+github_issues_reference.md
+create_remaining_issues.ps1

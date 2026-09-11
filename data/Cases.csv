@@ -1,0 +1,101 @@
+Case_Key__c,Subject,Description,Asset_Key__c,Origin,Status,Safety_Flag__c,CreatedDate
+CS-00047,Operator reports unusual vibration on Scrubber 014 during routine rounds.,Operator reports unusual vibration on Scrubber 014 during routine rounds.,AST-0014,Web,New,FALSE,2026-08-13T05:22:02
+CS-00066,Corrosion visible on Pump 019 housing,"Corrosion visible on Pump 019 housing, requesting assessment.",AST-0019,Email,New,FALSE,2026-08-22T01:22:02
+CS-00036,Outlet temperature on Heat Exchanger 020 has drifted 8 degrees above normal over,Outlet temperature on Heat Exchanger 020 has drifted 8 degrees above normal over 3 shifts.,AST-0020,Email,New,FALSE,2026-08-29T18:22:02
+CS-00089,Routine PM overdue on Scrubber 013,"Routine PM overdue on Scrubber 013, requesting inspection window.",AST-0013,Phone,New,FALSE,2026-08-06T04:22:02
+CS-00045,Intermittent trip on Heat Exchanger 012,"Intermittent trip on Heat Exchanger 012, resets on its own after a few minutes.",AST-0012,Mobile Field App,New,FALSE,2026-08-16T16:22:02
+CS-00002,Differential pressure trending up on Compressor 015 over the past week.,Differential pressure trending up on Compressor 015 over the past week.,AST-0015,Web,New,FALSE,2026-08-29T13:22:02
+CS-00029,Routine PM overdue on Valve 001,"Routine PM overdue on Valve 001, requesting inspection window.",AST-0001,Phone,New,FALSE,2026-09-02T22:22:02
+CS-00059,Intermittent trip on Valve 001,"Intermittent trip on Valve 001, resets on its own after a few minutes.",AST-0001,Web,New,FALSE,2026-08-25T02:22:02
+CS-00052,Noise complaint from operators near Scrubber 013,"Noise complaint from operators near Scrubber 013, unclear source.",AST-0013,Email,New,FALSE,2026-08-09T13:22:02
+CS-00072,Differential pressure trending up on Heat Exchanger 020 over the past week.,Differential pressure trending up on Heat Exchanger 020 over the past week.,AST-0020,Mobile Field App,New,FALSE,2026-08-22T19:22:02
+CS-00081,Outlet temperature on Valve 025 has drifted 8 degrees above normal over 3 shifts,Outlet temperature on Valve 025 has drifted 8 degrees above normal over 3 shifts.,AST-0025,Email,New,FALSE,2026-08-11T23:22:02
+CS-00054,Intermittent trip on Scrubber 013,"Intermittent trip on Scrubber 013, resets on its own after a few minutes.",AST-0013,Email,New,FALSE,2026-08-06T15:22:02
+CS-00053,Recurring high-high alarm on Valve 025,"Recurring high-high alarm on Valve 025, unclear if real or instrument fault.",AST-0025,Email,New,FALSE,2026-08-15T23:22:02
+CS-00085,Level indication on Heat Exchanger 008 disagrees with local gauge glass.,Level indication on Heat Exchanger 008 disagrees with local gauge glass.,AST-0008,Web,New,FALSE,2026-08-14T09:22:02
+CS-00025,Corrosion visible on Heat Exchanger 008 housing,"Corrosion visible on Heat Exchanger 008 housing, requesting assessment.",AST-0008,Phone,New,FALSE,2026-08-17T13:22:02
+CS-00098,Pressure relief valve on Valve 011 audibly chattering,"Pressure relief valve on Valve 011 audibly chattering, high concern.",AST-0011,Mobile Field App,New,FALSE,2026-08-28T02:22:02
+CS-00088,Corrosion visible on Scrubber 013 housing,"Corrosion visible on Scrubber 013 housing, requesting assessment.",AST-0013,Phone,New,FALSE,2026-08-08T21:22:02
+CS-00064,Corrosion visible on Sensor/Transmitter 006 housing,"Corrosion visible on Sensor/Transmitter 006 housing, requesting assessment.",AST-0006,Email,New,FALSE,2026-08-23T22:22:02
+CS-00050,Outlet temperature on Heat Exchanger 008 has drifted 8 degrees above normal over,Outlet temperature on Heat Exchanger 008 has drifted 8 degrees above normal over 3 shifts.,AST-0008,Mobile Field App,New,FALSE,2026-08-25T06:22:02
+CS-00011,Noise complaint from operators near Compressor 024,"Noise complaint from operators near Compressor 024, unclear source.",AST-0024,Phone,New,FALSE,2026-08-29T09:22:02
+CS-00013,Recurring high-high alarm on Sensor/Transmitter 006,"Recurring high-high alarm on Sensor/Transmitter 006, unclear if real or instrument fault.",AST-0006,Mobile Field App,New,FALSE,2026-08-29T13:22:02
+CS-00091,H2S alarm activated in the vicinity of Compressor 024.,H2S alarm activated in the vicinity of Compressor 024.,AST-0024,Web,New,FALSE,2026-08-21T08:22:02
+CS-00019,Intermittent trip on Scrubber 023,"Intermittent trip on Scrubber 023, resets on its own after a few minutes.",AST-0023,Mobile Field App,New,FALSE,2026-09-01T09:22:02
+CS-00069,Corrosion visible on Heat Exchanger 021 housing,"Corrosion visible on Heat Exchanger 021 housing, requesting assessment.",AST-0021,Email,New,FALSE,2026-09-03T08:22:02
+CS-00062,Level indication on Valve 011 disagrees with local gauge glass.,Level indication on Valve 011 disagrees with local gauge glass.,AST-0011,Email,New,FALSE,2026-08-19T11:22:02
+CS-00077,Routine PM overdue on Heat Exchanger 004,"Routine PM overdue on Heat Exchanger 004, requesting inspection window.",AST-0004,Web,New,FALSE,2026-08-11T01:22:02
+CS-00100,Strong chemical odor reported near Heat Exchanger 018,"Strong chemical odor reported near Heat Exchanger 018, operators pulled back as precaution.",AST-0018,Email,New,FALSE,2026-08-28T19:22:02
+CS-00083,Recurring high-high alarm on Scrubber 023,"Recurring high-high alarm on Scrubber 023, unclear if real or instrument fault.",AST-0023,Web,New,FALSE,2026-08-28T05:22:02
+CS-00071,Operator reports unusual vibration on Heat Exchanger 005 during routine rounds.,Operator reports unusual vibration on Heat Exchanger 005 during routine rounds.,AST-0005,Phone,New,FALSE,2026-08-29T00:22:02
+CS-00008,Outlet temperature on Scrubber 014 has drifted 8 degrees above normal over 3 shi,Outlet temperature on Scrubber 014 has drifted 8 degrees above normal over 3 shifts.,AST-0014,Phone,New,FALSE,2026-09-01T18:22:02
+CS-00065,Recurring high-high alarm on Valve 001,"Recurring high-high alarm on Valve 001, unclear if real or instrument fault.",AST-0001,Email,New,FALSE,2026-08-30T02:22:02
+CS-00076,Routine PM overdue on Heat Exchanger 017,"Routine PM overdue on Heat Exchanger 017, requesting inspection window.",AST-0017,Phone,New,FALSE,2026-08-19T08:22:02
+CS-00038,Level indication on Valve 003 disagrees with local gauge glass.,Level indication on Valve 003 disagrees with local gauge glass.,AST-0003,Email,New,FALSE,2026-09-04T15:22:02
+CS-00044,Outlet temperature on Heat Exchanger 012 has drifted 8 degrees above normal over,Outlet temperature on Heat Exchanger 012 has drifted 8 degrees above normal over 3 shifts.,AST-0012,Web,New,FALSE,2026-08-15T12:22:02
+CS-00056,Differential pressure trending up on Reactor 002 over the past week.,Differential pressure trending up on Reactor 002 over the past week.,AST-0002,Mobile Field App,New,FALSE,2026-08-24T16:22:02
+CS-00090,Level indication on Pump 010 disagrees with local gauge glass.,Level indication on Pump 010 disagrees with local gauge glass.,AST-0010,Mobile Field App,New,FALSE,2026-08-18T16:22:02
+CS-00058,Recurring high-high alarm on Reactor 007,"Recurring high-high alarm on Reactor 007, unclear if real or instrument fault.",AST-0007,Phone,New,FALSE,2026-08-14T02:22:02
+CS-00018,Recurring high-high alarm on Scrubber 013,"Recurring high-high alarm on Scrubber 013, unclear if real or instrument fault.",AST-0013,Mobile Field App,New,FALSE,2026-08-27T02:22:02
+CS-00034,Minor leak observed at Heat Exchanger 004 packing gland,"Minor leak observed at Heat Exchanger 004 packing gland, no visible spray.",AST-0004,Email,New,FALSE,2026-09-02T12:22:02
+CS-00012,Intermittent trip on Reactor 007,"Intermittent trip on Reactor 007, resets on its own after a few minutes.",AST-0007,Mobile Field App,New,FALSE,2026-09-01T02:22:02
+CS-00046,Outlet temperature on Heat Exchanger 005 has drifted 8 degrees above normal over,Outlet temperature on Heat Exchanger 005 has drifted 8 degrees above normal over 3 shifts.,AST-0005,Web,New,FALSE,2026-08-11T10:22:02
+CS-00068,Differential pressure trending up on Sensor/Transmitter 006 over the past week.,Differential pressure trending up on Sensor/Transmitter 006 over the past week.,AST-0006,Email,New,FALSE,2026-08-19T18:22:02
+CS-00030,Intermittent trip on Reactor 007,"Intermittent trip on Reactor 007, resets on its own after a few minutes.",AST-0007,Email,New,FALSE,2026-09-01T04:22:02
+CS-00041,Differential pressure trending up on Heat Exchanger 004 over the past week.,Differential pressure trending up on Heat Exchanger 004 over the past week.,AST-0004,Web,New,FALSE,2026-08-19T14:22:02
+CS-00055,Recurring high-high alarm on Heat Exchanger 004,"Recurring high-high alarm on Heat Exchanger 004, unclear if real or instrument fault.",AST-0004,Web,New,FALSE,2026-08-18T07:22:02
+CS-00057,Level indication on Valve 011 disagrees with local gauge glass.,Level indication on Valve 011 disagrees with local gauge glass.,AST-0011,Phone,New,FALSE,2026-08-23T21:22:02
+CS-00007,Corrosion visible on Compressor 024 housing,"Corrosion visible on Compressor 024 housing, requesting assessment.",AST-0024,Mobile Field App,New,FALSE,2026-08-29T00:22:02
+CS-00067,Outlet temperature on Compressor 015 has drifted 8 degrees above normal over 3 s,Outlet temperature on Compressor 015 has drifted 8 degrees above normal over 3 shifts.,AST-0015,Mobile Field App,New,FALSE,2026-08-10T16:22:02
+CS-00027,Noise complaint from operators near Reactor 007,"Noise complaint from operators near Reactor 007, unclear source.",AST-0007,Web,New,FALSE,2026-08-28T03:22:02
+CS-00001,Level indication on Pump 010 disagrees with local gauge glass.,Level indication on Pump 010 disagrees with local gauge glass.,AST-0010,Email,New,FALSE,2026-08-21T23:22:02
+CS-00092,Loss of caustic feed to Storage Tank 009,"Loss of caustic feed to Storage Tank 009, downstream pH dropping fast.",AST-0009,Mobile Field App,New,FALSE,2026-09-05T03:22:02
+CS-00042,Corrosion visible on Heat Exchanger 012 housing,"Corrosion visible on Heat Exchanger 012 housing, requesting assessment.",AST-0012,Web,New,FALSE,2026-08-23T11:22:02
+CS-00082,Outlet temperature on Valve 016 has drifted 8 degrees above normal over 3 shifts,Outlet temperature on Valve 016 has drifted 8 degrees above normal over 3 shifts.,AST-0016,Email,New,FALSE,2026-08-22T13:22:02
+CS-00005,Noise complaint from operators near Reactor 002,"Noise complaint from operators near Reactor 002, unclear source.",AST-0002,Phone,New,FALSE,2026-08-20T08:22:02
+CS-00024,Outlet temperature on Reactor 022 has drifted 8 degrees above normal over 3 shif,Outlet temperature on Reactor 022 has drifted 8 degrees above normal over 3 shifts.,AST-0022,Mobile Field App,New,FALSE,2026-09-01T21:22:02
+CS-00043,Recurring high-high alarm on Reactor 002,"Recurring high-high alarm on Reactor 002, unclear if real or instrument fault.",AST-0002,Email,New,FALSE,2026-08-08T14:22:02
+CS-00099,Strong chemical odor reported near Storage Tank 009,"Strong chemical odor reported near Storage Tank 009, operators pulled back as precaution.",AST-0009,Mobile Field App,New,FALSE,2026-09-04T16:22:02
+CS-00035,Intermittent trip on Compressor 024,"Intermittent trip on Compressor 024, resets on its own after a few minutes.",AST-0024,Web,New,FALSE,2026-08-28T06:22:02
+CS-00023,Minor leak observed at Valve 003 packing gland,"Minor leak observed at Valve 003 packing gland, no visible spray.",AST-0003,Phone,New,FALSE,2026-08-17T13:22:02
+CS-00093,Loss of caustic feed to Valve 011,"Loss of caustic feed to Valve 011, downstream pH dropping fast.",AST-0011,Web,New,FALSE,2026-08-10T01:22:02
+CS-00063,Level indication on Reactor 007 disagrees with local gauge glass.,Level indication on Reactor 007 disagrees with local gauge glass.,AST-0007,Mobile Field App,New,FALSE,2026-08-14T16:22:02
+CS-00037,Recurring high-high alarm on Heat Exchanger 021,"Recurring high-high alarm on Heat Exchanger 021, unclear if real or instrument fault.",AST-0021,Mobile Field App,New,FALSE,2026-08-28T14:22:02
+CS-00070,Recurring high-high alarm on Reactor 022,"Recurring high-high alarm on Reactor 022, unclear if real or instrument fault.",AST-0022,Web,New,FALSE,2026-08-11T09:22:02
+CS-00016,Level indication on Sensor/Transmitter 006 disagrees with local gauge glass.,Level indication on Sensor/Transmitter 006 disagrees with local gauge glass.,AST-0006,Mobile Field App,New,FALSE,2026-08-21T09:22:02
+CS-00039,Minor leak observed at Valve 011 packing gland,"Minor leak observed at Valve 011 packing gland, no visible spray.",AST-0011,Email,New,FALSE,2026-08-30T16:22:02
+CS-00074,Minor leak observed at Heat Exchanger 008 packing gland,"Minor leak observed at Heat Exchanger 008 packing gland, no visible spray.",AST-0008,Phone,New,FALSE,2026-08-08T12:22:02
+CS-00095,H2S alarm activated in the vicinity of Pump 019.,H2S alarm activated in the vicinity of Pump 019.,AST-0019,Phone,New,FALSE,2026-09-02T19:22:02
+CS-00010,Operator reports unusual vibration on Compressor 024 during routine rounds.,Operator reports unusual vibration on Compressor 024 during routine rounds.,AST-0024,Phone,New,FALSE,2026-09-04T03:22:02
+CS-00094,H2S alarm activated in the vicinity of Heat Exchanger 005.,H2S alarm activated in the vicinity of Heat Exchanger 005.,AST-0005,Phone,New,FALSE,2026-08-07T03:22:02
+CS-00051,Outlet temperature on Heat Exchanger 008 has drifted 8 degrees above normal over,Outlet temperature on Heat Exchanger 008 has drifted 8 degrees above normal over 3 shifts.,AST-0008,Phone,New,FALSE,2026-08-15T09:22:02
+CS-00049,Level indication on Heat Exchanger 004 disagrees with local gauge glass.,Level indication on Heat Exchanger 004 disagrees with local gauge glass.,AST-0004,Phone,New,FALSE,2026-08-09T00:22:02
+CS-00075,Level indication on Valve 025 disagrees with local gauge glass.,Level indication on Valve 025 disagrees with local gauge glass.,AST-0025,Web,New,FALSE,2026-08-30T17:22:02
+CS-00096,Visible release/spray observed at Scrubber 014,"Visible release/spray observed at Scrubber 014, area evacuated pending assessment.",AST-0014,Mobile Field App,New,FALSE,2026-08-31T14:22:02
+CS-00014,Intermittent trip on Compressor 015,"Intermittent trip on Compressor 015, resets on its own after a few minutes.",AST-0015,Phone,New,FALSE,2026-09-03T19:22:02
+CS-00040,Intermittent trip on Compressor 015,"Intermittent trip on Compressor 015, resets on its own after a few minutes.",AST-0015,Mobile Field App,New,FALSE,2026-08-19T15:22:02
+CS-00021,Operator reports unusual vibration on Heat Exchanger 018 during routine rounds.,Operator reports unusual vibration on Heat Exchanger 018 during routine rounds.,AST-0018,Email,New,FALSE,2026-09-04T14:22:02
+CS-00087,Level indication on Compressor 015 disagrees with local gauge glass.,Level indication on Compressor 015 disagrees with local gauge glass.,AST-0015,Phone,New,FALSE,2026-08-30T02:22:02
+CS-00079,Intermittent trip on Heat Exchanger 020,"Intermittent trip on Heat Exchanger 020, resets on its own after a few minutes.",AST-0020,Mobile Field App,New,FALSE,2026-08-09T22:22:02
+CS-00078,Intermittent trip on Reactor 022,"Intermittent trip on Reactor 022, resets on its own after a few minutes.",AST-0022,Email,New,FALSE,2026-08-06T01:22:02
+CS-00022,Routine PM overdue on Pump 019,"Routine PM overdue on Pump 019, requesting inspection window.",AST-0019,Web,New,FALSE,2026-09-03T23:22:02
+CS-00048,Outlet temperature on Scrubber 014 has drifted 8 degrees above normal over 3 shi,Outlet temperature on Scrubber 014 has drifted 8 degrees above normal over 3 shifts.,AST-0014,Email,New,FALSE,2026-08-30T17:22:02
+CS-00033,Operator reports unusual vibration on Heat Exchanger 017 during routine rounds.,Operator reports unusual vibration on Heat Exchanger 017 during routine rounds.,AST-0017,Email,New,FALSE,2026-08-06T18:22:02
+CS-00060,Noise complaint from operators near Valve 003,"Noise complaint from operators near Valve 003, unclear source.",AST-0003,Email,New,FALSE,2026-08-15T12:22:02
+CS-00028,Recurring high-high alarm on Heat Exchanger 005,"Recurring high-high alarm on Heat Exchanger 005, unclear if real or instrument fault.",AST-0005,Mobile Field App,New,FALSE,2026-08-26T13:22:02
+CS-00073,Outlet temperature on Pump 019 has drifted 8 degrees above normal over 3 shifts.,Outlet temperature on Pump 019 has drifted 8 degrees above normal over 3 shifts.,AST-0019,Mobile Field App,New,FALSE,2026-08-21T03:22:02
+CS-00015,Operator reports unusual vibration on Heat Exchanger 018 during routine rounds.,Operator reports unusual vibration on Heat Exchanger 018 during routine rounds.,AST-0018,Phone,New,FALSE,2026-08-07T08:22:02
+CS-00086,Level indication on Valve 003 disagrees with local gauge glass.,Level indication on Valve 003 disagrees with local gauge glass.,AST-0003,Mobile Field App,New,FALSE,2026-08-25T22:22:02
+CS-00061,Recurring high-high alarm on Compressor 024,"Recurring high-high alarm on Compressor 024, unclear if real or instrument fault.",AST-0024,Email,New,FALSE,2026-08-15T02:22:02
+CS-00017,Operator reports unusual vibration on Scrubber 013 during routine rounds.,Operator reports unusual vibration on Scrubber 013 during routine rounds.,AST-0013,Web,New,FALSE,2026-08-24T15:22:02
+CS-00031,Outlet temperature on Valve 003 has drifted 8 degrees above normal over 3 shifts,Outlet temperature on Valve 003 has drifted 8 degrees above normal over 3 shifts.,AST-0003,Email,New,FALSE,2026-08-27T10:22:02
+CS-00020,Outlet temperature on Pump 010 has drifted 8 degrees above normal over 3 shifts.,Outlet temperature on Pump 010 has drifted 8 degrees above normal over 3 shifts.,AST-0010,Phone,New,FALSE,2026-08-17T16:22:02
+CS-00080,Minor leak observed at Compressor 015 packing gland,"Minor leak observed at Compressor 015 packing gland, no visible spray.",AST-0015,Mobile Field App,New,FALSE,2026-08-22T07:22:02
+CS-00003,Operator reports unusual vibration on Valve 011 during routine rounds.,Operator reports unusual vibration on Valve 011 during routine rounds.,AST-0011,Web,New,FALSE,2026-08-18T08:22:02
+CS-00026,Corrosion visible on Scrubber 014 housing,"Corrosion visible on Scrubber 014 housing, requesting assessment.",AST-0014,Email,New,FALSE,2026-08-07T07:22:02
+CS-00032,Intermittent trip on Compressor 015,"Intermittent trip on Compressor 015, resets on its own after a few minutes.",AST-0015,Email,New,FALSE,2026-08-16T19:22:02
+CS-00004,Differential pressure trending up on Valve 001 over the past week.,Differential pressure trending up on Valve 001 over the past week.,AST-0001,Phone,New,FALSE,2026-08-29T13:22:02
+CS-00097,Loss of caustic feed to Storage Tank 009,"Loss of caustic feed to Storage Tank 009, downstream pH dropping fast.",AST-0009,Email,New,FALSE,2026-08-30T01:22:02
+CS-00006,Routine PM overdue on Storage Tank 009,"Routine PM overdue on Storage Tank 009, requesting inspection window.",AST-0009,Web,New,FALSE,2026-08-19T11:22:02
+CS-00084,Intermittent trip on Valve 011,"Intermittent trip on Valve 011, resets on its own after a few minutes.",AST-0011,Phone,New,FALSE,2026-09-01T11:22:02
+CS-00009,Noise complaint from operators near Scrubber 014,"Noise complaint from operators near Scrubber 014, unclear source.",AST-0014,Mobile Field App,New,FALSE,2026-08-23T01:22:02

@@ -1,0 +1,21 @@
+Case_Key__c,Subject,Description,My_Urgency,My_Category
+CS-00072,Differential pressure trending up on Heat Exchanger 020 over the past week.,Differential pressure trending up on Heat Exchanger 020 over the past week.,Medium,Mechanical
+CS-00098,Pressure relief valve on Valve 011 audibly chattering,"Pressure relief valve on Valve 011 audibly chattering, high concern.",Critical,Safety
+CS-00065,Recurring high-high alarm on Valve 001,"Recurring high-high alarm on Valve 001, unclear if real or instrument fault.",High,Safety
+CS-00022,Routine PM overdue on Pump 019,"Routine PM overdue on Pump 019, requesting inspection window.",Low,Routine/Preventative
+CS-00037,Recurring high-high alarm on Heat Exchanger 021,"Recurring high-high alarm on Heat Exchanger 021, unclear if real or instrument fault.",High,Safety
+CS-00059,Intermittent trip on Valve 001,"Intermittent trip on Valve 001, resets on its own after a few minutes.",High,Electrical/Instrumentation
+CS-00023,Minor leak observed at Valve 003 packing gland,"Minor leak observed at Valve 003 packing gland, no visible spray.",High,Safety
+CS-00095,H2S alarm activated in the vicinity of Pump 019.,H2S alarm activated in the vicinity of Pump 019.,Critical,Safety
+CS-00001,Level indication on Pump 010 disagrees with local gauge glass.,Level indication on Pump 010 disagrees with local gauge glass.,Low,Electrical/Instrumentation
+CS-00014,Intermittent trip on Compressor 015,"Intermittent trip on Compressor 015, resets on its own after a few minutes.",High,Electrical/Instrumentation
+CS-00052,Noise complaint from operators near Scrubber 013,"Noise complaint from operators near Scrubber 013, unclear source.",Medium,Safety
+CS-00093,Loss of caustic feed to Valve 011,"Loss of caustic feed to Valve 011, downstream pH dropping fast.",High,Process
+CS-00079,Intermittent trip on Heat Exchanger 020,"Intermittent trip on Heat Exchanger 020, resets on its own after a few minutes.",High,Electrical/Instrumentation
+CS-00054,Intermittent trip on Scrubber 013,"Intermittent trip on Scrubber 013, resets on its own after a few minutes.",High,Electrical/Instrumentation
+CS-00028,Recurring high-high alarm on Heat Exchanger 005,"Recurring high-high alarm on Heat Exchanger 005, unclear if real or instrument fault.",High,Safety
+CS-00044,Outlet temperature on Heat Exchanger 012 has drifted 8 degrees above normal over,Outlet temperature on Heat Exchanger 012 has drifted 8 degrees above normal over 3 shifts.,Medium,Process
+CS-00053,Recurring high-high alarm on Valve 025,"Recurring high-high alarm on Valve 025, unclear if real or instrument fault.",High,Safety
+CS-00097,Loss of caustic feed to Storage Tank 009,"Loss of caustic feed to Storage Tank 009, downstream pH dropping fast.",Medium,Process
+CS-00100,Strong chemical odor reported near Heat Exchanger 018,"Strong chemical odor reported near Heat Exchanger 018, operators pulled back as precaution.",Critical,Safety
+CS-00045,Intermittent trip on Heat Exchanger 012,"Intermittent trip on Heat Exchanger 012, resets on its own after a few minutes.",High,Electrical/Instrumentation

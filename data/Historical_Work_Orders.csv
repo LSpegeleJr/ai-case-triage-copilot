@@ -1,0 +1,21 @@
+WO_Key__c,Asset_Key__c,Status__c,Priority__c,Resolution_Notes__c,Closed_Date__c
+HWO-0001,AST-0006,Completed,Low,"Replaced level transmitter, cross-checked against radar gauge.",2025-10-25
+HWO-0002,AST-0003,Completed,Medium,"Replaced level transmitter, cross-checked against radar gauge.",2025-10-25
+HWO-0003,AST-0015,Completed,Low,Confirmed deviation was on .SP due to a logic error; corrected DCS configuration.,2025-11-16
+HWO-0004,AST-0001,Completed,Low,"Cleaned scrubber media bed, differential pressure returned to design range.",2025-09-11
+HWO-0005,AST-0018,Completed,Medium,Adjusted downstream valve sequencing to eliminate surge condition.,2026-06-30
+HWO-0006,AST-0010,Completed,Medium,"Tightened valve packing, no further leak reported after 30-day follow-up.",2026-01-06
+HWO-0007,AST-0001,Completed,Low,Confirmed deviation was on .SP due to a logic error; corrected DCS configuration.,2025-12-13
+HWO-0008,AST-0025,Completed,High,Replaced mechanical seal proactively before failure occurred.,2025-05-16
+HWO-0009,AST-0004,Completed,Low,Confirmed deviation was on .SP due to a logic error; corrected DCS configuration.,2025-06-22
+HWO-0010,AST-0021,Completed,Low,"Restored caustic feed pump, verified scrubber pH within 15 minutes.",2026-05-17
+HWO-0011,AST-0005,Completed,Medium,"Tightened valve packing, no further leak reported after 30-day follow-up.",2025-11-23
+HWO-0012,AST-0025,Completed,Low,"Replaced worn bearing, realigned coupling, vibration returned to baseline.",2025-10-24
+HWO-0013,AST-0011,Completed,Medium,"Replaced worn bearing, realigned coupling, vibration returned to baseline.",2026-06-30
+HWO-0014,AST-0012,Completed,Medium,"Identified tube leak, isolated affected pass, scheduled bundle replacement.",2026-07-28
+HWO-0015,AST-0008,Completed,Low,"Cleaned scrubber media bed, differential pressure returned to design range.",2026-07-14
+HWO-0016,AST-0024,Completed,Medium,"Cleaned scrubber media bed, differential pressure returned to design range.",2025-08-02
+HWO-0017,AST-0018,Completed,High,"Tightened valve packing, no further leak reported after 30-day follow-up.",2025-09-23
+HWO-0018,AST-0016,Completed,Low,"Tightened valve packing, no further leak reported after 30-day follow-up.",2026-04-13
+HWO-0019,AST-0017,Completed,Low,"Replaced level transmitter, cross-checked against radar gauge.",2026-05-10
+HWO-0020,AST-0018,Completed,Low,"Identified tube leak, isolated affected pass, scheduled bundle replacement.",2025-08-26

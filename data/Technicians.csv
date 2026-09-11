@@ -1,0 +1,7 @@
+Name,Skills,Available
+Maria Chen,Pump;Valve;Compressor,True
+James Okafor,Reactor;Heat Exchanger,True
+Priya Nair,Scrubber;Storage Tank,True
+Dave Kowalski,Sensor/Transmitter;Valve;Pump,False
+Alicia Fontaine,Heat Exchanger;Compressor;Reactor,True
+Tom Ellis,Storage Tank;Scrubber;Sensor/Transmitter,True
