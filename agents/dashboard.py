@@ -319,14 +319,6 @@ def main():
     # at all, rather than at a formatting/parsing edge case.
     st.sidebar.caption(f"{len(all_dates)} of {len(cases)} Cases have a usable Created date")
 
-    # TEMPORARY DIAGNOSTIC — not a permanent part of the dashboard, added
-    # specifically to see the RAW value coming back from Salesforce
-    # directly, rather than continuing to guess what might be wrong with
-    # it. Remove this block once the actual issue is identified.
-    if cases:
-        st.sidebar.caption(f"DEBUG — raw CreatedDate on first Case: {repr(cases[0].get('CreatedDate'))}")
-        st.sidebar.caption(f"DEBUG — all keys on first Case: {list(cases[0].keys())}")
-
     earliest = min(all_dates).date() if all_dates else datetime.now().date() - timedelta(days=90)
     latest = max(all_dates).date() if all_dates else datetime.now().date() + timedelta(days=1)
 
