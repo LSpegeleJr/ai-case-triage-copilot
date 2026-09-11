@@ -311,36 +311,34 @@ def main():
     all_dates = [parse_created_date(c) for c in cases]
     all_dates = [d for d in all_dates if d]
 
-    # min(all_dates).date() / max(all_dates).date()
-        # min()/max() find the earliest and latest actual timestamps
-        # across every Case; .date() drops the time-of-day portion, since
-        # st.date_input works with plain dates, not full timestamps —
-        # time-of-day precision is added back separately, below
-    # if all_dates else datetime.now().date()
-        # a fallback for the edge case of an empty Case list entirely,
-        # so this line can't crash trying to call min() on nothing
-    earliest = min(all_dates).date() if all_dates else datetime.now().date()
-    latest = max(all_dates).date() if all_dates else datetime.now().date()
+    # A real, visible diagnostic — rather than silently falling back and
+    # leaving the actual cause invisible, this puts a concrete number in
+    # front of the dispatcher: exactly how many Cases had a real,
+    # parseable CreatedDate versus how many didn't. 0 out of a large
+    # total points squarely at CreatedDate not coming through the query
+    # at all, rather than at a formatting/parsing edge case.
+    st.sidebar.caption(f"{len(all_dates)} of {len(cases)} Cases have a usable Created date")
 
-    # if earliest == latest: latest = earliest + timedelta(days=1)
-        # A SECOND, independent safety net — even if every Case genuinely
-        # were created on the exact same calendar day, min_value equal to
-        # max_value below would leave the widget with no valid range to
-        # actually pick within, which can make a date-range picker appear
-        # entirely locked/uninteractive rather than just narrow. Forcing
-        # at least a one-day spread guarantees the widget always stays
-        # genuinely usable, regardless of what the underlying data looks
-        # like or what caused it.
-    if earliest == latest:
-        latest = earliest + timedelta(days=1)
+    earliest = min(all_dates).date() if all_dates else datetime.now().date() - timedelta(days=90)
+    latest = max(all_dates).date() if all_dates else datetime.now().date() + timedelta(days=1)
 
     # st.sidebar.date_input(..., value=(earliest, latest))
         # passing a TUPLE as the value makes this a single RANGE picker —
         # the dispatcher can pick a start and end date in one widget,
         # rather than two separate ones
-        # date_range starts as (earliest, latest) — the widest possible
-        # range — showing every Case by default, until narrowed
-    date_range = st.sidebar.date_input("Date range", value=(earliest, latest), min_value=earliest, max_value=latest)
+        # date_range starts as (earliest, latest) — the widest range the
+        # actual data supports, pre-selected by default, until narrowed
+    # NO min_value/max_value this time, deliberately
+        # The first version of this constrained what could be picked to
+        # exactly the computed earliest/latest — which seemed safe, but
+        # meant that if that calculation was ever wrong (as it was here),
+        # the widget became genuinely unusable, with no way to work
+        # around it from the UI at all. Leaving the picker's actual
+        # boundary unconstrained means a dispatcher can always manually
+        # pick whatever range they need, regardless of whether the
+        # underlying data or the default calculation is behaving as
+        # expected — a real safety margin, not just a narrower one.
+    date_range = st.sidebar.date_input("Date range", value=(earliest, latest))
 
     # st.sidebar.time_input(...)
         # Adds time-of-day precision on top of the date range above — two
