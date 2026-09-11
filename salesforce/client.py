@@ -13,51 +13,16 @@ Client Credentials instead.) This flow authenticates as whichever user is
 configured as the "Run As" user on the External Client App itself, using
 only the Consumer Key/Secret — no username, password, or security token
 needed in this script at all.
-
-ENVIRONMENT SWITCHING (Dev vs. Staging): the code here never changes
-between environments — only which .env file gets loaded does. This is a
-named, standard principle (Twelve-Factor App: "config varies across
-environments, code does not"), not something specific to this project.
-Every agent script gets this for free, automatically, without any changes
-of its own — see get_connection() below for exactly how.
 """
 
 import os
-import sys
-from dotenv import load_dotenv
 import requests
 from simple_salesforce import Salesforce
 
 
 def get_connection() -> Salesforce:
-    """
-    Authenticate via OAuth 2.0 Client Credentials flow and return a live
-    Salesforce connection object.
-
-    Connects to Dev by default. Pass --staging on the command line of
-    whichever script calls this to connect to Staging instead — e.g.
-    `python agents/triage_agent.py --staging`. No individual agent script
-    needs its own flag-handling code for this: every script already calls
-    get_connection() to talk to Salesforce, so putting the environment
-    switch here, once, makes it available everywhere at once.
-    """
-    # if "--staging" in sys.argv:
-        # sys.argv is Python's own list of everything typed on the command
-        # line, shared by whichever script actually imported this module —
-        # e.g. running "python agents/triage_agent.py --staging" makes
-        # sys.argv equal to ['agents/triage_agent.py', '--staging'], so
-        # this check works no matter which script called get_connection()
-    if "--staging" in sys.argv:
-        # load_dotenv(".env.staging", override=True)
-            # By the time this runs, the calling script's own top-level
-            # load_dotenv() call has ALREADY loaded the default .env file
-            # (Dev's credentials) into the environment — python-dotenv
-            # normally REFUSES to overwrite a variable that's already set,
-            # so without override=True, Staging's values would silently
-            # never take effect; this forces the replacement
-        load_dotenv(".env.staging", override=True)
-        print("[client.py] --staging flag detected — connecting to Staging")
-
+    """Authenticate via OAuth 2.0 Client Credentials flow and return a live
+    Salesforce connection object."""
     print("[client.py] Using Client Credentials flow (v3)")  # confirms this exact file is what's running
 
     # Builds the token endpoint's full URL for this specific org
@@ -319,6 +284,11 @@ def get_all_cases(sf: Salesforce) -> list:
     get_case_by_key() — one query gets everything the dashboard needs to
     display and filter on, without a second query per Case.
 
+    Also includes CreatedDate, so the dashboard can show and filter by
+    when each Case actually arrived — useful for distinguishing separate
+    batches of tickets (the original 100, versus any later live-generated
+    batch) even if they share every other field in common.
+
     WHERE Case_Key__c != null excludes Salesforce's own out-of-box demo
     Case records, which every Developer Edition org is auto-seeded with the
     moment it's created — those never have a Case_Key__c at all, since they
@@ -326,19 +296,11 @@ def get_all_cases(sf: Salesforce) -> list:
 
     Returns a list of record dicts (Salesforce's raw query result shape).
     """
-    # No filter beyond Case_Key__c != null — deliberately queries every
-    # real Case OUR system created, not just a sample, since the dashboard
-    # needs the whole set to display and filter across
-    # WHERE Case_Key__c != null
-        # Case_Key__c is blank on Salesforce's auto-seeded demo Cases,
-        # since they were never loaded through dataloader.io or touched
-        # by any agent — this excludes exactly those records, leaving
-        # only the ones our own system actually built
     result = sf.query("""
         SELECT Id, Case_Key__c, Subject, Description, AI_Priority__c,
                AI_Category__c, AI_Confidence__c, AI_Root_Cause__c,
                AI_Root_Cause_Confidence__c, Safety_Flag__c,
-               AI_Reasoning_Log__c, Human_Reviewed__c,
+               AI_Reasoning_Log__c, Human_Reviewed__c, CreatedDate,
                Asset.Equipment_Type__c, Asset.Criticality__c
         FROM Case
         WHERE Case_Key__c != null
